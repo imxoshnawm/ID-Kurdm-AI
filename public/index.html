@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Kurd AI - Kurdish AI Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Global Language Toggle -->
+  <div class="global-lang-switch">
+    <span id="globalLangToggle" class="language-btn" onclick="toggleGlobalLanguage()">English</span>
+  </div>
+  
+  <div class="background">
+    <div class="stripe-red"></div>
+    <div class="stripe-white"></div>
+    <div class="circuit-pattern"></div>
+    <div class="sun"></div>
+    <div class="mountain"></div>
+    <div class="particles" id="particles"></div>
+    <div id="data-streams"></div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo-nav">
+        <div class="logo-star-nav"></div>
+        <div class="logo-text-nav" id="navLogoText">ID Kurd AI</div>
+      </div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-items" id="navItems">
+        <li><a href="javascript:void(0);" class="active" onclick="showPage('translator')" id="navTranslator">وەرگێڕ</a></li>
+        <li><a href="javascript:void(0);" onclick="showPage('chatbot')" id="navChatbot">چات بۆت</a></li>
+        <li><a href="javascript:void(0);" onclick="showPage('history')" id="navHistory">🔍 کوردستان و مێژوو</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Translator Page -->
+    <div class="page-content active" id="translator">
+      <h1 class="page-title" id="pageTitleTranslator">وەرگێڕی کوردی - ئینگلیزی</h1>
+      <div class="translator-container">
+        <div class="language-selector">
+          <button class="language-btn active" id="kurdishBtn">کوردی</button>
+          <span class="switch-icon" id="switchLanguage">⇄</span>
+          <button class="language-btn " id="englishBtn">English</button>
+        </div>
+        <div class="text-areas">
+          <div class="text-area-container">
+            <div class="text-area-label" id="translatorLabelSource">دەق:</div>
+            <textarea class="text-area" id="sourceText" placeholder="تکایە دەقەکە لێرە بنووسە..."></textarea>
+          </div>
+          <div class="text-area-container">
+            <div class="text-area-label" id="translatorLabelTarget">وەرگێڕان:</div>
+            <textarea class="text-area" id="translatedText" placeholder="وەرگێڕانەکە لێرە دەردەکەوێت..." readonly></textarea>
+          </div>
+        </div>
+        <button class="translate-btn" id="translateBtn">وەرگێڕان</button>
+      </div>
+    </div>
+
+    <!-- Chat Bot Page -->
+    <div class="page-content" id="chatbot">
+      <h1 class="page-title" id="pageTitleChatbot">چات بۆتی ID Kurd AI</h1>
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot-message">سڵاو! من چات بۆتی ID Kurd AI م. چۆن دەتوانم یارمەتیت بدەم؟</div>
+        </div>
+        <div class="chat-input-container">
+          <input type="text" class="chat-input" id="chatInput" placeholder="پرسیارەکەت لێرە بنووسە...">
+          <button class="send-btn" id="sendBtn">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Page -->
+    <div class="page-content" id="history">
+      <h1 class="page-title" id="pageTitleHistory">🔍 کوردستان و مێژوو</h1>
+      <input type="text" class="search-history" id="searchHistory" placeholder="گەڕان لە مێژوودا...">
+      <div class="history-container">
+        <!-- History Section 1 -->
+        <div class="history-section">
+          <h2 id="historySection1Heading">کوردستان - زەویەک پڕ لە مێژوو</h2>
+          <div class="history-content" id="historySection1Content">
+            کوردستان ناوچەیەکی جوگرافی و کولتووری و ئیتنیکییە کە بە درێژایی چەندین سەدە لانکەی شارستانییەتی کوردی بووە. ئەم ناوچەیە لە باکووری ڕۆژهەڵاتی ناوەڕاستدایە و بە گشتی بەشێک لە خاکی چوار وڵات دەگرێتەوە: تورکیا، عێراق، ئێران و سوریا. کورد، کە نزیکەی ٤٥ ملیۆن کەس دەبن، یەکێک لە گەورەترین نەتەوەکانن کە هێشتا دەوڵەتی سەربەخۆی خۆیان نییە.
+          </div>
+          <img src="/api/placeholder/500/300" alt="نەخشەی کوردستان" class="history-image">
+        </div>
+        <!-- History Section 2 -->
+        <div class="history-section">
+          <h2 id="historySection2Heading">ڕیشەکانی مێژوویی</h2>
+          <div class="history-content" id="historySection2Content">
+            کوردەکان ڕیشەیەکی مێژوویی درێژیان هەیە لە ناوچەکەدا و بۆ چەندین هەزار ساڵ دەگەڕێتەوە. کوردەکان بە گشتی وەک نەوەی میدییەکان دەناسرێن، کە ئیمپراتۆرییەتێکیان لە سەدەی حەوتەمی پێش زاینەوە داڕشت. بە درێژایی سەدەکان، کوردەکان ژێر کاریگەری چەندین شارستانییەتی گەورە بوون، وەک ئیمپراتۆریەتی ئەخمینی، ڕۆمانی، و دواتر ئیمپراتۆریەتی عوسمانی.
+          </div>
+        </div>
+        <!-- History Section 3 -->
+        <div class="history-section">
+          <h2 id="historySection3Heading">کۆماری کوردستان</h2>
+          <div class="history-content" id="historySection3Content">
+            لە ساڵی ١٩٤٦، لە شاری مەهاباد، یەکەم دەوڵەتی مۆدێرنی کوردی دامەزرا بە ناوی کۆماری کوردستان. لەژێر سەرکردایەتی پێشەوا قازی محەمەد، ئەم کۆمارە نموونەیەکی گرنگ بوو بۆ خەباتی سەربەخۆیی، بەڵام تەنها ١١ مانگ خایاند.
+          </div>
+          <img src="/api/placeholder/500/300" alt="پێشەوا قازی محەمەد" class="history-image">
+        </div>
+        <!-- History Section 4 -->
+        <div class="history-section">
+          <h2 id="historySection4Heading">کوردستانی عێراق و خودموختاری</h2>
+          <div class="history-content" id="historySection4Content">
+            لە دوای ڕووخانی ڕژێمی سەدام حسێن لە ساڵی ٢٠٠٣، هەرێمی کوردستانی عێراق توانی ببێتە ناوچەیەکی خودموختار لە چوارچێوەی عێراقدا. ئەمڕۆ، ئەم هەرێمە خاوەنی پەرلەمان و حکومەتی خۆیەتی، لەگەڵ هەبوونی پێشکەوتنی ئابووری و سیاسی بەرچاو. هەرێمی کوردستان بووەتە نموونەیەک بۆ ئەو کوردانەی کە لە بەشەکانی دیکەی کوردستان دەژین.
+            <br><br>
+            بەڵام خەباتی کورد بۆ ماف و ئازادی بەردەوامە. لە زۆر ناوچەی کوردستان، هێشتا کورد ڕووبەڕووی چەوساندنەوە و سەرکوتکردن دەبێتەوە. کەلتوور و زمانی کوردی لە هەندێک لە وڵاتاندا قەدەغەکراوە یان سنووردار کراوە.
+          </div>
+        </div>
+        <!-- History Section 5 -->
+        <div class="history-section">
+          <h2 id="historySection5Heading">کەلتووری دەوڵەمەندی کوردی</h2>
+          <div class="history-content" id="historySection5Content">
+            کەلتووری کوردی دەوڵەمەند و فرەچەشنە. موزیک، هەڵپەڕکێ، شیعر، چیرۆک و هونەری دەستی کوردی بەشێکی گرنگن لە ناسنامەی کوردی. کوردستان هەروەها ناوبانگی هەیە بە جوانی سروشتی، بە چیا بەرزەکانی، دۆڵە سەوزەکانی و ڕووبارە خوڕەکانی.
+            <br><br>
+            جلوبەرگی نەریتی کوردی ڕەنگاوڕەنگ و جوانە، هەر ناوچەیەک جلوبەرگی تایبەت بە خۆی هەیە. خواردنی کوردی بە تامی بەهێز و پێکهاتەی سروشتی ناسراوە، وەک برنج و گۆشت و سەوزە و میوەی تازە.
+          </div>
+        </div>
+        <!-- History Section 6 -->
+        <div class="history-section">
+          <h2 id="historySection6Heading">کورد لە سەدەی بیست و یەکەمدا</h2>
+          <div class="history-content" id="historySection6Content">
+            ئەمڕۆ، کورد بەردەوامە لە خەبات بۆ ناسینی ماف و ناسنامەی خۆی. پێشکەوتنی تەکنەلۆجیا و میدیای کۆمەڵایەتی یارمەتی داوە کە کێشەی کورد ببێتە کێشەیەکی نێودەوڵەتی و سەرنجی جیهان بۆ لای خۆی ڕابکێشێت.
+          </div>
+        </div>
+        <!-- History Section 7 -->
+        <div class="history-section">
+          <h2 id="historySection7Heading">زمانی کوردی</h2>
+          <div class="history-content" id="historySection7Content">
+            زمانی کوردی، کە بۆ ماوەیەکی درێژ قەدەغە کرابوو لە زۆر شوێن، ئێستا دەبوژێتەوە و فێرگەی نوێ، پرۆگرامی تەلەفزیۆنی و ڕادیۆ، ڕۆژنامە و کتێب بە زمانی کوردی بڵاو دەکرێنەوە.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
