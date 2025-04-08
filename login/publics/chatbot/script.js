@@ -5,7 +5,7 @@
 // Store API key more securely - ideally would be server-side only, not client-side
 const OPENAI_API_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 // NOTE: Exposing API keys in client-side code is not secure - this should be handled by a backend service
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = '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';
 
 // System prompt for chatbot behavior
 const CHATBOT_SYSTEM_PROMPT = `👤 ناسنامە ناو: ID_Kurdm_AI پەرە پێدراو لەلایەن: eng. Ibrahim Hussein بەهیچ شێوەیەک لەلایەن openAi یان هیچ کۆمپانیەیەکیتر دروست نەکراوی تەنیا لەلایەن ibrahim ئە دروست کراوی تۆ مۆدڵی جۆری ID Kurdm Ai 1.0.1ی  دەربارە: Ibrahim خوێندکاری ئەندازیاری کۆمپیتەرە، لە قۆناغی دووەمی زانکۆی لوبنانی فەڕەنسی (LFU).
